@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
-import matplotlib
 import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
 import numpy as np
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
+import matplotlib
 import yfinance as yf
 import os
 
@@ -13,10 +12,8 @@ import os
 st.set_page_config(page_title="NVDA Stock Viewer", layout="wide")
 
 # Font
-font_path = "Sarabun-Regular.ttf"
-fm.fontManager.addfont(font_path) 
-thai_font = fm.FontProperties(fname=font_path)
-matplotlib.rcParams['font.family'] = thai_font.get_name()
+matplotlib.rcParams['font.family'] = 'sans-serif'
+matplotlib.rcParams['font.sans-serif'] = ['Tahoma', 'Arial', 'DejaVu Sans']
 
 # Apply basic responsive style
 st.markdown("""
@@ -47,7 +44,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-#SlideBar
+# Slidebar: ช่วงเวลาให้เลือก
 with st.sidebar:
     st.header("เลือกช่วงข้อมูล")
     selected_period = st.selectbox("ช่วงเวลา", ["7d", "1mo", "3mo", "6mo", "1y"], index=3)
@@ -72,7 +69,13 @@ st.sidebar.info(f"ข้อมูลล่าสุดถึงวันที�
 
 # HEADER
 with st.container():
-    st.markdown("## NVDA (NVIDIA Corporation)")
+    st.markdown("""
+    <div style='display: flex; align-items: center;'>
+        <img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Nvidia_logo.svg/512px-Nvidia_logo.svg.png' width='30'/>
+        <h3 style='margin: 0;'>NVDA (NVIDIA Corporation123)</h3>
+    </div>
+    """, unsafe_allow_html=True)
+
     available_dates = df_sorted["Date"].dt.date.unique()
     selected_date = st.date_input("เลือกวันที่", value=available_dates[-1], min_value=available_dates[0], max_value=available_dates[-1])
     selected_row = df_sorted[df_sorted["Date"].dt.date == selected_date]
