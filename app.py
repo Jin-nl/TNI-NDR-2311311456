@@ -110,7 +110,7 @@ trend_poly = model_poly.predict(X_poly)
 df_sorted["SMA"] = df_sorted["Close"].rolling(window=sma_window).mean()
 df_sorted["EMA"] = df_sorted["Close"].ewm(span=ema_window, adjust=False).mean()
 
-# PLOT
+# PLOT SMA EMS
 with st.container():
     st.subheader("กราฟราคาปิดและเส้นแนวโน้ม")
     fig, ax = plt.subplots(figsize=(14, 5))
