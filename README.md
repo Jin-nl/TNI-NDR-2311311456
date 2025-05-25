@@ -5,9 +5,6 @@
 
 ---
 
-### 🔗 View the live app
-[Click to view the Streamlit app](https://tni-ndr-2311311456-qvktxhfxslhqifv3ub8por.streamlit.app/)
-
 ## คุณสมบัติหลัก
 
 - ดึงข้อมูลราคาหุ้น NVDA แบบเรียลไทม์จาก Yahoo Finance
