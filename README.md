@@ -31,7 +31,9 @@ pip install -r requirements.txt
 ### 2. รันโปรเจกต์
 
 ```bash
-streamlit run app.py
+git clone https://github.com/Jin-nl/TNI-NDR-2311311456.git
+cd TNI-NDR-2311311456
+
 ```
 
 เมื่อรันแล้วจะมีลิงก์ปรากฏใน Terminal เพื่อเปิดใช้งานเว็บไซต์
@@ -44,18 +46,18 @@ streamlit run app.py
 ├── app.py                 # ไฟล์หลักของแอปพลิเคชัน Streamlit
 ├── README.md              # คำอธิบายโปรเจกต์นี้
 ├── requirements.txt       # รายการไลบรารีที่ต้องติดตั้ง
+├── NVDA_Stocks_6M.xlsx
+
 ```
 
 ---
 
-## Deploy บน Streamlit Cloud
+## หมายเหตุ
 
-1. อัปโหลดโปรเจกต์ทั้งหมดขึ้น GitHub
-2. ไปที่เว็บไซต์ https://streamlit.io/cloud และล็อกอินด้วย GitHub
-3. กด "New app" และเลือก repository ที่มีโปรเจกต์ของคุณ
-4. กำหนดไฟล์เริ่มต้นเป็น `app.py` แล้วกด Deploy
+1. ระบบจะดึงข้อมูลย้อนหลังอัตโนมัติจาก yfinance
+2. ฟอนต์ภาษาไทยควรแสดงได้โดยไม่ต้องติดตั้งเพิ่มในเครื่อง
+3. หน้าเว็บเหมาะกับทั้ง desktop และ mobile ด้วย responsive layout
 
-หลังจากนั้นจะได้ลิงก์ URL สำหรับใช้งานเว็บไซต์ของคุณทันที
 
 ---
 
