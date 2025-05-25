@@ -6,4 +6,3 @@ scikit-learn
 numpy
 yfinance
 streamlit-option-menu
-Sarabun-Regular.ttf
