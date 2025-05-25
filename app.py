@@ -9,12 +9,14 @@ from sklearn.linear_model import LinearRegression
 import yfinance as yf
 import os
 
-#Fetching NVDA stock data using yfinance
+# CONFIG
 st.set_page_config(page_title="NVDA Stock Viewer", layout="wide")
 
 # Font
-thai_font = fm.FontProperties(fname="Sarabun-Regular.ttf")
-matplotlib.rc('font', family=thai_font.get_name())
+font_path = "Sarabun-Regular.ttf"
+fm.fontManager.addfont(font_path) 
+thai_font = fm.FontProperties(fname=font_path)
+matplotlib.rcParams['font.family'] = thai_font.get_name()
 
 # Apply basic responsive style
 st.markdown("""
@@ -99,7 +101,6 @@ with st.sidebar:
     st.header("ตั้งค่า Moving Averages")
     sma_window = st.slider("SMA Window", min_value=5, max_value=60, value=20)
     ema_window = st.slider("EMA Window", min_value=5, max_value=60, value=20)
-
 
 X = df_sorted["Date"].map(pd.Timestamp.toordinal).values.reshape(-1, 1)
 y = df_sorted["Close"].values

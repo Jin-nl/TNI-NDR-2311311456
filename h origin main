@@ -1,0 +1,12 @@
+[33me662b54[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Fix Thai font rendering with Sarabun-Regular.ttf
+[33mec3e4e0[m Update README explanation and deploy guide
+[33m8aad4c5[m Prepare for Streamlit Cloud deployment
+[33m6f49003[m Add README and requirements
+[33mc870ac4[m Add project footer
+[33m6f4ee82[m Add NVDA shareholders table with styled display
+[33m29c7df8[m Add RSI and MACD
+[33maa5f00b[m Add closing price chart with trendline, moving averages, and selected date marker
+[33m176c0b3[m Add SMA and EMA calculation and display
+[33m8c78ff7[m Add polynomial regression model for stock price trendline
+[33m2dfd148[m Add stock data fetching for NVDA from Yahoo Finance and export to Excel
+[33ma68ee9d[m Initial setup: Streamlit layout, config, and responsive styles
