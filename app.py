@@ -70,7 +70,7 @@ st.sidebar.info(f"ข้อมูลล่าสุดถึงวันที�
 with st.container():
     col1, col2 = st.columns([1, 10])
     with col1:
-        st.image("nvidia_logo.png", width=35)
+        st.image("assets/nvidia_logo.png", width=35)
     with col2:
         st.markdown("## NVDA (NVIDIA Corporation)")
 
