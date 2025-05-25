@@ -93,13 +93,13 @@ with st.container():
     else:
         st.warning("ไม่มีข้อมูลของวันที่เลือก")
 
-# Moving Averages
+# Moving Averages Calculate
 with st.sidebar:
     st.header("ตั้งค่า Moving Averages")
     sma_window = st.slider("SMA Window", min_value=5, max_value=60, value=20)
     ema_window = st.slider("EMA Window", min_value=5, max_value=60, value=20)
 
-# CALCULATION
+
 X = df_sorted["Date"].map(pd.Timestamp.toordinal).values.reshape(-1, 1)
 y = df_sorted["Close"].values
 poly = PolynomialFeatures(degree=3)
