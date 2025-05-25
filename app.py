@@ -14,8 +14,8 @@ st.set_page_config(page_title="NVDA Stock Viewer", layout="wide")
 # Font
 matplotlib.rcParams['font.family'] = 'sans-serif'
 matplotlib.rcParams['font.sans-serif'] = ['Tahoma', 'Arial', 'DejaVu Sans']
-
-# Apply basic responsive styling
+#
+# Apply basic responsive style
 st.markdown("""
     <style>
         @media (max-width: 768px) {
