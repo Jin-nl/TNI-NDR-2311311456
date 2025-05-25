@@ -67,14 +67,12 @@ df_sorted = df.sort_values("Date")
 latest_date = df["Date"].max().strftime("%Y-%m-%d")
 st.sidebar.info(f"ข้อมูลล่าสุดถึงวันที่: **{latest_date}**")
 
-# HEADER
 with st.container():
-    st.markdown("""
-    <div style='display: flex; align-items: center;'>
-        <img src='https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Nvidia_logo.svg/512px-Nvidia_logo.svg.png' width='30'/>
-        <h3 style='margin: 0;'>NVDA (NVIDIA Corporation123)</h3>
-    </div>
-    """, unsafe_allow_html=True)
+    col1, col2 = st.columns([1, 10])
+    with col1:
+        st.image("Nvidia_logo.png", width=35)
+    with col2:
+        st.markdown("## NVDA (NVIDIA Corporation)")
 
     available_dates = df_sorted["Date"].dt.date.unique()
     selected_date = st.date_input("เลือกวันที่", value=available_dates[-1], min_value=available_dates[0], max_value=available_dates[-1])
