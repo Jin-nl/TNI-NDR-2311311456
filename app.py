@@ -44,7 +44,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Slidebar: ช่วงเวลาให้เลือก
+#SlideBar
 with st.sidebar:
     st.header("เลือกช่วงข้อมูล")
     selected_period = st.selectbox("ช่วงเวลา", ["7d", "1mo", "3mo", "6mo", "1y"], index=3)
