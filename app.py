@@ -8,13 +8,13 @@ import matplotlib
 import yfinance as yf
 import os
 
-# CONFIG
+#Fetching NVDA stock data using yfinance
 st.set_page_config(page_title="NVDA Stock Viewer", layout="wide")
 
 # Font
 matplotlib.rcParams['font.family'] = 'sans-serif'
 matplotlib.rcParams['font.sans-serif'] = ['Tahoma', 'Arial', 'DejaVu Sans']
-#
+
 # Apply basic responsive style
 st.markdown("""
     <style>
