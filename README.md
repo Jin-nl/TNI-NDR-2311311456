@@ -47,7 +47,7 @@ cd TNI-NDR-2311311456
 ├── README.md              # คำอธิบายโปรเจกต์นี้
 ├── requirements.txt       # รายการไลบรารีที่ต้องติดตั้ง
 ├── NVDA_Stocks_6M.xlsx
-
+├── Sarabun-Regular.ttf
 ```
 
 ---
