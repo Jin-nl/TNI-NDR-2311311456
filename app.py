@@ -181,6 +181,7 @@ if selected_tab == "ผู้ถือหุ้นนี้":
     st.subheader("อันดับผู้ถือหุ้นรายใหญ่ของ NVDA (NVIDIA)")
     st.table(top_shareholders)
 
+#Cal RSI MACD
 elif selected_tab == "วิเคราะห์ทางเทคนิค":
     st.subheader("RSI (Relative Strength Index)")
     def compute_rsi(series, period=14):
