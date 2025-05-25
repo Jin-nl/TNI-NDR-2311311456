@@ -1,0 +1,8 @@
+streamlit
+pandas
+matplotlib
+openpyxl
+scikit-learn
+numpy
+yfinance
+streamlit-option-menu
