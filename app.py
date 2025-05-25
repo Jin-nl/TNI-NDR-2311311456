@@ -132,7 +132,7 @@ with st.container():
     ax.tick_params(axis='x', labelrotation=45)
     st.pyplot(fig)
 
-# DATA RANGE
+# DATA ช่วงวันที่ของข้อมูล
 with st.container():
     st.markdown("---")
     st.subheader("ช่วงวันที่ของข้อมูล")
