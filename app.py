@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 import numpy as np
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
-import matplotlib
 import yfinance as yf
 import os
 
@@ -12,8 +13,8 @@ import os
 st.set_page_config(page_title="NVDA Stock Viewer", layout="wide")
 
 # Font
-matplotlib.rcParams['font.family'] = 'sans-serif'
-matplotlib.rcParams['font.sans-serif'] = ['Tahoma', 'Arial', 'DejaVu Sans']
+thai_font = fm.FontProperties(fname="Sarabun-Regular.ttf")
+matplotlib.rc('font', family=thai_font.get_name())
 
 # Apply basic responsive style
 st.markdown("""
@@ -216,7 +217,7 @@ elif selected_tab == "วิเคราะห์ทางเทคนิค":
     ax_macd.legend()
     st.pyplot(fig_macd)
 
-# FOOTER
+# FOOTER 
 st.markdown("---")
 st.caption("""
     NVDA Stock Analysis Dashboard เว็บไซต์นี้แสดงข้อมูลราคาปิดของหุ้น NVIDIA ย้อนหลัง 6 เดือน  
