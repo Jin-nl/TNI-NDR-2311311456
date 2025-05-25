@@ -140,7 +140,7 @@ with st.container():
     col1.metric(label="เริ่มต้น", value=df_sorted['Date'].min().strftime('%Y-%m-%d'))
     col2.metric(label="สิ้นสุด", value=df_sorted['Date'].max().strftime('%Y-%m-%d'))
 
-# TABS
+# TABS ผู้ถือหุ้นนี้
 from streamlit_option_menu import option_menu
 selected_tab = option_menu(
     menu_title=None,
