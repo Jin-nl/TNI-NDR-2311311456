@@ -6,16 +6,14 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 import matplotlib
 import yfinance as yf
-import os
 
-# CONFIG
+
 st.set_page_config(page_title="NVDA Stock Viewer", layout="wide")
 
 # Font
 matplotlib.rcParams['font.family'] = 'sans-serif'
 matplotlib.rcParams['font.sans-serif'] = ['Tahoma', 'Arial', 'DejaVu Sans']
 
-# Apply basic responsive style
 st.markdown("""
     <style>
         @media (max-width: 768px) {
@@ -48,8 +46,7 @@ st.markdown("""
 with st.sidebar:
     st.header("เลือกช่วงข้อมูล")
     selected_period = st.selectbox("ช่วงเวลา", ["7d", "1mo", "3mo", "6mo", "1y"], index=3)
-
-# LOAD DATA
+    
 @st.cache_data
 def load_data(period):
     nvda = yf.Ticker("NVDA")
@@ -59,18 +56,16 @@ def load_data(period):
     df.to_excel("NVDA_Stocks_6M.xlsx", sheet_name="NVDA_Stocks_6M", index=False)
     return df.dropna()
 
-# โหลดข้อมูล
 df = load_data(selected_period)
 df_sorted = df.sort_values("Date")
 
-# แสดงวันที่ล่าสุด
 latest_date = df["Date"].max().strftime("%Y-%m-%d")
 st.sidebar.info(f"ข้อมูลล่าสุดถึงวันที่: **{latest_date}**")
 
 with st.container():
     col1, col2 = st.columns([1, 10])
     with col1:
-        st.image("nvidia1.jpg", width=35)
+        st.image("nvidia1.jpg", width=80)
     with col2:
         st.markdown("## NVDA (NVIDIA Corporation)")
 
